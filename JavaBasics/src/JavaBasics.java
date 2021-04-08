@@ -3,9 +3,9 @@ public class JavaBasics {
         System.out.println("Hallo");
 
         boolean runden = true;
-        int anzahl = 0;
-        double summe = 0.0;
-        double schnitt = 0.0;
+        int anzahl;
+        double summe = 0;
+        double schnitt;
         String text = "Der Durchscnitt ist ";
         int[] zahlen = {5, 7, 2, 9, 15};
 
