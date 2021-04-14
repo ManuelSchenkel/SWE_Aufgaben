@@ -61,8 +61,6 @@ public class ExpeditionManager {
         System.out.println("0. App beenden");
         System.out.println("");
         System.out.println("Ihre Eingabe:");
-
-
     }
 
     public static void pressEnter() {
@@ -77,13 +75,15 @@ public class ExpeditionManager {
         do {
             if(input.hasNextInt()) {
                 zahl = input.nextInt();
+                input.nextLine();
                 if (zahl < 0) {
-                    System.out.println("Ungültige Eingabe, nur positive Ganzzahlen erlaubt");
+                    System.out.println("Ungültige Eingabe, nur positive Ganzzahlen erlaubt (true)");
+                    System.out.println("Erneute Eingabe:");
                 }
             } else {
-                System.out.println("Ungültige Eingabe, nur positive Ganzzahlen erlaubt");
+                input.nextLine();
+                System.out.println("Ungültige Eingabe, nur positive Ganzzahlen erlaubt (false)");
                 System.out.println("Erneute Eingabe:");
-                zahl = input.nextInt();
             }
 
         } while (zahl <= 0);
