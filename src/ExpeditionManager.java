@@ -85,7 +85,6 @@ public class ExpeditionManager {
                 System.out.println("Ungültige Eingabe, nur positive Ganzzahlen erlaubt (false)");
                 System.out.println("Erneute Eingabe:");
             }
-
         } while (zahl <= 0);
         return zahl;
     }
