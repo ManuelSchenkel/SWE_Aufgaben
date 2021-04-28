@@ -9,5 +9,7 @@ public class HundeDressur {
 
         System.out.println(fido.name + " ist " + fido.gewicht + " kg schwer.");
         System.out.println(bello.name + " ist " + bello.gewicht + " kg schwer.");
+        fido.gibLaut(4);
+        bello.gibLaut(3);
     }
 }
