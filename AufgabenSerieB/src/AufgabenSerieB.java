@@ -20,7 +20,6 @@ public class AufgabenSerieB {
 
         Zeit c = new Zeit();
         Zeit d = new Zeit();
-        Zeit e;
 
         c.stunden = 0;
         c.minuten = 45;
@@ -30,7 +29,7 @@ public class AufgabenSerieB {
         d.minuten = 45;
         d.sekunden = 50;
 
-        e = c.add(d);
+        Zeit e = c.add(d);
         e.anzeigen();
     }
 }
