@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/AufgabenSerieB/AufgabenSerieB.iml" filepath="$PROJECT_DIR$/AufgabenSerieB/AufgabenSerieB.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExpeditionManager/ExpeditionManager.iml" filepath="$PROJECT_DIR$/ExpeditionManager/ExpeditionManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/HundeDressur/HundeDressur.iml" filepath="$PROJECT_DIR$/HundeDressur/HundeDressur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LineareDatenstrukturen/LineareDatenstrukturen.iml" filepath="$PROJECT_DIR$/LineareDatenstrukturen/LineareDatenstrukturen.iml" />
       <module fileurl="file://$PROJECT_DIR$/Misc/Misc.iml" filepath="$PROJECT_DIR$/Misc/Misc.iml" />
       <module fileurl="file://$PROJECT_DIR$/SWE_Aufgaben.iml" filepath="$PROJECT_DIR$/SWE_Aufgaben.iml" />
     </modules>

@@ -22,13 +22,13 @@ public class Hund {
         return "Hund Name: " + name + ", Gewicht " + gewicht;
     }
 
-    void gibLaut(int anzahl) {
+    public void gibLaut(int anzahl) {
         for (int i = 0; i < anzahl; i++) {
             gibLautNachGewicht();
         }
     }
 
-    void gibLautNachGewicht() {
+    private void gibLautNachGewicht() {
         if (gewicht < 5) {
             System.out.println("Kläff");
         } else {
