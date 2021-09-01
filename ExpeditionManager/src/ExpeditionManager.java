@@ -1,45 +1,41 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ExpeditionManager {
+    static ArrayList<Item> items = new ArrayList<Item>();
+    static Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
+
         boolean runApp = true;
-        int weight = 0, profit = 0;
-        String name = "";
+        Item item = null;
 
         while (runApp == true) {
-
             showMenu();
 
-            Scanner input = new Scanner(System.in);
             if (input.hasNextInt()) {
                 int eingabe = input.nextInt();
                 switch (eingabe) {
                     case 1:
-                        System.out.println("Erfasse neuen Gegenstand");
-                        System.out.println("Name:");
-                        if (input.hasNext()) {
-                            name = input.next();
-                            input.nextLine();
-                        }
-                        System.out.println("Gewicht:");
-                        weight = positiveInteger();
-                        System.out.println("Profit:");
-                        profit = positiveInteger();
+                        add();
                         pressEnter();
                         break;
                     case 2:
-                        System.out.println("Starte Methode anschauen");
-                        System.out.println("Name:" + name);
-                        System.out.println("Gewicht:" + weight);
-                        System.out.println("Profit:" + profit);
+                        System.out.println("[+] Gegenstand anzeigen");
+                        if (items != null) {
+                            items.forEach((e) -> System.out.println(e));
+
+                        } else {
+                            System.out.println("Es wurde noch kein Gegenstand erfasst");
+                        }
                         pressEnter();
                         break;
                     case 0:
-                        System.out.println("Beende App");
+                        System.out.println("[+] Beende App");
                         runApp = false;
                         break;
                     default:
-                        System.out.println("Ungültige Eingabe");
+                        System.out.println("[+] Ungültige Eingabe");
                         break;
                 }
             }
@@ -48,8 +44,8 @@ public class ExpeditionManager {
 
     public static void showMenu() {
         System.out.println("Expedition");
-        System.out.println("1. erfassen");
-        System.out.println("2. anzeigen");
+        System.out.println("1. Gegenstand erfassen");
+        System.out.println("2. Gegenstand anzeigen");
         System.out.println("3. öffnen");
         System.out.println("4. speichern");
         System.out.println("5. Limite setzen");
@@ -68,24 +64,21 @@ public class ExpeditionManager {
         input.nextLine();
     }
 
-    public static int positiveInteger() {
-        Scanner input = new Scanner(System.in);
-        int zahl = 0;
-        do {
-            if(input.hasNextInt()) {
-                zahl = input.nextInt();
-                input.nextLine();
-                if (zahl < 0) {
-                    System.out.println("Ungültige Eingabe, nur positive Ganzzahlen erlaubt (true)");
-                    System.out.println("Erneute Eingabe:");
-                }
-            } else {
-                input.nextLine();
-                System.out.println("Ungültige Eingabe, nur positive Ganzzahlen erlaubt (false)");
-                System.out.println("Erneute Eingabe:");
-            }
-        } while (zahl <= 0);
-        return zahl;
+    static void add() {
+        String name = null;
+        System.out.println("[+] Erfasse neuen Gegenstand");
+        System.out.println("Name:");
+        if (input.hasNext()) {
+            name = input.next();
+            input.nextLine();
+        }
+        System.out.println("Gewicht:");
+        int weight = Util.positiveInteger();
+        System.out.println("Profit:");
+        int profit = Util.positiveInteger();
+        System.out.println("Gegenstand wurde erfasst");
+        Item item = new Item(name, weight, profit);
+        items.add(item);
     }
 
 }
